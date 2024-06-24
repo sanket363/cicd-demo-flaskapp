@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y apache2 libapache2-mod-wsgi-py3
 RUN a2enmod rewrite && a2enmod headers && a2enmod proxy && a2enmod proxy_http
 
 # Create a directory for the Flask app
-WORKDIR /var/www/html/flask_app
+WORKDIR /var/www/html/
 
 # Copy the Flask app files into the container
-COPY . /var/www/html/flask_app
+COPY . /var/www/html/
 
 # Install Flask and other dependencies
 RUN pip install flask
