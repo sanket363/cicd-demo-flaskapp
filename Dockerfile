@@ -13,7 +13,7 @@ WORKDIR /var/www/html/
 COPY . /var/www/html/
 
 # Install Flask and other dependencies
-RUN pip install flask
+RUN pip install -r requirements.txt
 
 # Configure Apache to serve the Flask app
 COPY apache-flask.conf /etc/apache2/sites-available/flask.conf
